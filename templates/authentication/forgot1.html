@@ -1,0 +1,52 @@
+{% extends 'layouts.html'%}
+
+{% block title%}
+forgotpassword page
+{% endblock %}
+
+{% block content %}
+
+    
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+  
+           
+          <div class="d-flex justify-content-between align-items-center" style="background-color: #008CBA">
+            <h2 class="text-center" >I Forgot My Password</h2> 
+            </div>
+          
+            
+          </div>
+  
+      
+      </section>
+  
+      
+  
+      <section id="contact" class="contact">
+        <div class="container">
+  
+          
+          <div class="row mt-5 justify-content-center " data-aos="fade-up">
+            <div class="col-lg-4">
+                <h3 class="text-center">Forgot Password</h3></hr>
+              <form action="" method="post" role="form" >
+                 {%csrf_token%}
+                
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+               
+                 <div class="text-center"><br/>
+                   <button type="submit" style ="background-color: #008CBA" class="btn-block">Forgot Password</button></div>
+              </form><br/>
+              <small>Login to my account<a href="{% url 'login'%}"> Click Here </a></small>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'layouts.html'%}
+
+{% block title%}
+ Home page
+{% endblock %}
+
+
+{% block content %}
+{% include 'slider.html' with sliderdata=slider %}
+
+{% load static %}
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+  
+          <div class="row no-gutters">
+            <div class="col-lg-6 video-box">
+              <img src="{{about.0.image.url}}" class="img-fluid" alt="">
+              <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            </div>
+  
+            <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+  
+              <div class="section-title">
+                <h2>About Us</h2>
+                <!--<p>Here you can watch various you tube channel videos,which will guide you and you will enjoy watching the video.</p>-->
+                <p>{{about.0.description}}</p>
+              </div>
+  
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                <h4 class="title"><a href="">Guide</a></h4>
+                <p class="description">{{about.2.description}}</p>
+              </div>
+  
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="bx bx-gift"></i></div>
+                <h4 class="title"><a href="">Gift</a></h4>
+                <p class="description">{{about.1.description}}</p>
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End About Us Section -->
+  
+     
+  
+  
+      
+     
+{% endblock %}

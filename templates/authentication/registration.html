@@ -1,0 +1,21 @@
+{% extends 'layouts.html'%}
+
+{% block title%}
+registration page
+{% endblock %}
+
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+    <form class="fadeIn second" style ="padding: 100px; display: block; background-color:azure; border: 15px ; width: 800px;  margin-left: 300px;  text-align: center" method="POST" class="form-group">
+	{% csrf_token %}
+	{{ form|crispy }}
+	<button type="submit" class="btn btn-success">Register</button>
+    </form>
+
+  
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layouts.html'%}
+{% load static%}
+
+
+{% block title%}
+Login page
+{% endblock %}
+
+{% block content %}
+
+
+<head>
+    <link  href="{% static 'css/login.css' %}" rel="stylesheet">
+</head>
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Forgot Password </h2>
+      
+  
+      <!-- Icon -->
+     
+  
+      <!-- Login Form -->
+      <form action="" method="post" role="form" >
+        {%csrf_token%}
+        <input type="text" id="email" class="fadeIn second" name="email" placeholder="Email Address" data-rule="minlen:4"  required>
+        <input type="submit" class="fadeIn fourth" value="Forgot password">
+      </form><br/>
+      <small>Login to my account<a href="{% url 'login'%}"><p> Click Here </p> </a></small>
+  
+      
+  
+    </div>
+  </div>
+ 
+  
+{% endblock %}

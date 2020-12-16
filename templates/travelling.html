@@ -1,0 +1,22 @@
+{% extends 'layouts.html'%}
+
+{% block title%}
+travel page
+{% endblock %}
+
+{% block content %}
+
+{% load embed_video_tags %}
+
+    
+    {% for i in obj%}
+    {% video i.video 'small' %}
+    {% endfor %}
+  
+        
+        
+    
+
+
+
+{% endblock %}
